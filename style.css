@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#result {
+  color: red;
+  /* Style the message as needed */
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(79, 0, 0, 1) 50%,
+    rgba(120, 17, 0, 1) 100%
+  );  
+  height: 100dvh;
+
+  overflow: auto;
+}
+
+.container {
+    height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  transition: all 1s, flex-direction 0.3s ease-in-out;
+}
+
+.logocont {
+  transition: all 1s;
+  animation: slidein 4s 1 forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  max-width: 300px;
+}
+#logo {
+  width: 35%;
+  transition: opacity 2s;
+  opacity: 1;
+  transition: all 1s;
+}
+#logo2cont {
+  width: 65%;
+  display: none;
+  transition: all 1s;
+}
+#logos {
+  width: 100%;
+  transition: all 1s;
+}
+
+.pt {
+  stroke: white;
+  stroke-width: 10px;
+  fill: white;
+  animation: test 4s 1 forwards;
+  transition: all 1s;
+}
+
+.pts {
+  stroke: white;
+  stroke-width: 10px;
+  fill: white;
+  display: none;
+
+  transition: all 0.1s;
+}
+
+.logocont svg {
+  width: 35%;
+}
+
+.loginform {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 15px;
+  width: 0;
+  display: none;
+  flex-direction: column;
+  transition: all 1s;
+}
+
+/* loginform.style.padding="2% 3%" */
+
+.forml {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: all 1s;
+}
+/* forml.style.gap="5px" */
+/* 2*/
+
+.inputs {
+  display: none;
+  transition: all 1s, max-height 2s;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.inputs input {
+  width: 100%;
+  padding: 3px 3px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgb(159, 157, 157);
+}
+
+.inputs label {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(159, 157, 157);
+}
+
+.suemail {
+  width: 0;
+  height: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.upform {
+  display: none;
+  margin: 0;
+  overflow: hidden;
+  transition: all 1s, max-height 1s;
+}
+/* upform.style.margin="1% 0 5% 0"; */
+
+.upform h2 {
+  color: rgb(142, 5, 5);
+  margin: 0;
+}
+
+.upform h4 {
+  color: rgb(159, 157, 157);
+  margin: 0;
+  font-size: 14px;
+}
+
+.subbut {
+  align-self: center;
+  display: flex;
+  margin-top: 0px;
+  justify-content: center;
+}
+/* subbut.style.marginTop="15px"; */
+
+.btn-sin {
+  position: relative;
+  display: none;
+  background-color: white;
+  border: 1 solid black;
+  border-radius: 13px;
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  list-style: none;
+  outline: none;
+  padding: 8px 70px;
+  color: rgb(142, 5, 5);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.btn-sin:hover {
+  background: rgb(210, 206, 206);
+}
+
+.lowerf {
+  display: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 0%;
+  transition: all 1s, max-height 2s;
+}
+
+.lowerf h4 {
+  margin: 2% 0 1% 0;
+  color: rgb(159, 157, 157);
+  font-size: 14px;
+}
+
+.lowerfbtn {
+  display: flex;
+  gap: 2px;
+  justify-content: space-between;
+}
+
+.lowerfbtn button {
+  background: none;
+  border: none;
+  color: rgb(142, 5, 5);
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+}
+#passDiv {
+  width: 0;
+  height: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+#idDiv {
+  width: 0;
+  height: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+#verifInputsContainer {
+  width: 100%;
+  align-self: center;
+  height: 0%;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+#new-pass-div {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  align-self: center;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+#new-pass-div .verifinput {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px 10px;
+  transition: all 1s;
+  font-size: 1rem;
+
+  box-sizing: border-box;
+  border: 1px solid rgb(159, 157, 157);
+}
+
+/* Style pass */
+#passInpStyles {
+  display: flex;
+  position: relative;
+}
+#pass {
+  position: relative;
+}
+#togglePass {
+  position: absolute;
+  right: 0;
+  transform: translateY(12px);
+  z-index: 100;
+}
+
+.inputs,
+.lowerf,
+.upform {
+  max-height: 0;
+}
+
+@keyframes slidein {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  60% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+@keyframes back {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes test {
+  0% {
+    stroke-dasharray: 3550;
+    stroke-dashoffset: 3550;
+    fill: transparent;
+  }
+
+  20% {
+    stroke-dasharray: 1300;
+    stroke-dashoffset: 1300;
+  }
+
+  40% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  60% {
+    stroke-dasharray: 1300;
+    stroke-dashoffset: 1300;
+  }
+
+  80% {
+    stroke-dasharray: 3550;
+    stroke-dashoffset: 3550;
+    fill: transparent;
+  }
+
+  100% {
+    stroke-dasharray: 3550;
+    stroke-dashoffset: 3550;
+  }
+}
+
+@keyframes testy {
+  from {
+    flex-direction: row;
+  }
+
+  to {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .logocont {
+    margin: 70% 0 0 0;
+  }
+
+  body {
+    background: white;
+  }
+
+  .btn-sin {
+    padding: 7px 100px;
+    background-color: rgb(142, 5, 5);
+    color: white;
+  }
+
+  .loginform {
+    gap: 30px;
+  }
+
+  .lowerfbtn {
+    flex-direction: column;
+    align-items: start;
+    gap: 3px;
+  }
+
+  .pt {
+    stroke: url(#paint2_linear_2_111);
+    fill: url(#paint2_linear_2_111);
+    animation: test 0s 1 forwards;
+  }
+
+  .pts {
+    stroke: url(#paint2_linear_2_111);
+    fill: url(#paint2_linear_2_111);
+  }
+
+  .logocont svg {
+    width: 35%;
+  }
+
+  .btn-sin:hover {
+    background: rgb(181, 19, 19);
+  }
+  .inputs label {
+    font-size: 14px;
+  }
+  .upform h2 {
+    font-size: 27px;
+  }
+
+  .upform h4 {
+    font-size: 15px;
+  }
+  .lowerf h4 {
+    margin: 2% 0 1% 0;
+    color: rgb(159, 157, 157);
+    font-size: 15px;
+  }
+
+  .lowerfbtn button {
+    background: none;
+    border: none;
+    color: rgb(142, 5, 5);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0;
+    cursor: pointer;
+  }
+  .inputs input {
+    font-size: 14px;
+  }
+}

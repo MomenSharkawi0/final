@@ -1,0 +1,31 @@
+#online-users-list li {
+  border-radius: 15px;
+  background-color: #280808;
+}
+.touch-span {
+  padding: 10px 15px;
+  border-radius: 15px;
+  background: #280808;
+  color: white;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  cursor: pointer;
+  display: block;
+}
+
+.touch-span::after {
+  float: right;
+  right: 10%;
+  content: "+";
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+#touch {
+  position: absolute;
+  opacity: 0;
+  height: 0px;
+}
+
+.minus::after {
+  transform: rotate(45deg);
+}
