@@ -8,8 +8,8 @@ if (!isset($_POST['idnumber']) || empty($_POST['idnumber'])) {
 }
 
 // Assuming your database credentials
-$host = "92.205.147.175";
-$username_db = "momen";
+$host = "64.226.68.255";
+$username_db = "phpmyadmin";
 $password_db = "MoMeN011**";
 $database = "sharkawi_muc";
 

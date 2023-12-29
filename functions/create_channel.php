@@ -30,7 +30,7 @@ if (!empty($data)) {
 function createParticipantRow($participantsData)
 {
   // Database connection details
-  $conn = new mysqli("92.205.147.175", "momen", "MoMeN011**", "sharkawi_muc");
+  $conn = new mysqli("64.226.68.255", "phpmyadmin", "MoMeN011**", "sharkawi_muc");
 
 
   // Check connection

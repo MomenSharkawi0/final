@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     // Database connection details
-    $servername = "92.205.147.175";
-    $username = "momen";
+    $servername = "64.226.68.255";
+    $username = "phpmyadmin";
     $password_db = "MoMeN011**";
     $dbname = "sharkawi_muc";
 
